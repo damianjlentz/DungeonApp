@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D01B9C75-2895-4D11-B5D9-8E56C8BEF555}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Dungeon</RootNamespace>
-    <AssemblyName>Dungeon</AssemblyName>
+    <ProjectGuid>{3F6308DF-29E0-4AA6-8CDC-48FF4E6E9862}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DungeonLibrary</RootNamespace>
+    <AssemblyName>DungeonLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,21 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Class.cs" />
+    <Compile Include="Combat.cs" />
+    <Compile Include="Monster.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DungeonLibrary\DungeonLibrary.csproj">
-      <Project>{3f6308df-29e0-4aa6-8cdc-48ff4e6e9862}</Project>
-      <Name>DungeonLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MonsterLibrary\MonsterLibrary.csproj">
-      <Project>{3b612fb9-d6a5-42cd-9eeb-fa311423e86f}</Project>
-      <Name>MonsterLibrary</Name>
-    </ProjectReference>
+    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
